@@ -144,14 +144,6 @@ aside header {
 
 /* messages panel */
 
-.app {
-  grid-template-columns: 1fr;
-}
-
-aside {
-  display: none;
-}
-
 .chat-header {
   background-color: var(--grey-300);
   border-bottom: 1px solid var(--grey-500);
@@ -170,7 +162,43 @@ aside {
   color: var(--grey-700);
 }
 
-/* agregar estilos para los mensajes */
+/* messages styles */
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+.message {
+  background-color: var(--grey-300);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.238);
+  padding: 10px;
+  width: 60%;
+}
+
+.message .time {
+  color: var(--grey-700);
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: end;
+}
+
+.me {
+  align-self: end;
+  background-color: var(--green-100);
+}
+
+/* footer styles */
 
 footer {
   display: flex;
@@ -239,4 +267,15 @@ footer .send {
 footer .send:hover {
   background-color: #138b80;
   transform: scale(0.98);
+}
+
+/* responsive desing */
+@media (max-width:880px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    display: none;
+  }
 }
